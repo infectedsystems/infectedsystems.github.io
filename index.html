@@ -71,7 +71,7 @@
 
   <!-- Container for the audio player -->
   <div class="audio-container">
-    <audio id="myAudio" controls>
+    <audio id="myAudio" controls loop>
       <source src="Country_Roads.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
@@ -82,8 +82,8 @@
       // Get the audio element by ID
       var audio = document.getElementById("myAudio");
 
-      // Show the audio player
-      audio.style.display = "block";
+      // Hide the audio player
+      audio.style.display = "none";
 
       // Start playing the audio
       audio.play();
