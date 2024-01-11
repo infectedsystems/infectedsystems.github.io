@@ -50,8 +50,13 @@
       }
     }
 
-    /* Adjusted margin to separate the audio player from the text */
+    /* Hide the audio element by default */
     audio {
+      display: none;
+    }
+
+    /* Adjusted margin to separate the audio player from the text */
+    .audio-container {
       margin-top: 20px;
     }
   </style>
@@ -61,9 +66,28 @@
   <header>Test Domain Please Ignore</header>
   <p>This is not the domain you are looking for...</p>
 
-  <audio controls autoplay>
-    <source src="Country_Roads.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
+  <!-- Button to reject cookies and start audio playback -->
+  <button onclick="startAudio()">Reject Cookies</button>
+
+  <!-- Container for the audio player -->
+  <div class="audio-container">
+    <audio id="myAudio" controls>
+      <source src="Country_Roads.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script>
+    function startAudio() {
+      // Get the audio element by ID
+      var audio = document.getElementById("myAudio");
+
+      // Show the audio player
+      audio.style.display = "block";
+
+      // Start playing the audio
+      audio.play();
+    }
+  </script>
 </body>
 </html>
