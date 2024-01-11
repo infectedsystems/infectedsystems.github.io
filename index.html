@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blahaj Go Spinny</title>
   <style>
     body {
@@ -8,9 +10,7 @@
       padding: 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
       background-color: #ceb5c5;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -24,7 +24,7 @@
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       margin-bottom: 20px;
     }
@@ -34,37 +34,28 @@
       font-size: 18px;
     }
 
-    @media (max-width: 600px) {
-      img {
-        max-width: 80%;
-      }
-
-      header {
-        font-size: 20px;
-      }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
     }
-    
+
     @media (min-width: 601px) {
       img {
         max-width: 600px;
       }
     }
 
-    /* Hide the audio element by default */
-    audio {
-      display: none;
-    }
-
-    /* Adjusted margin to separate the audio player from the text */
+    /* Hide the audio container by default */
     .audio-container {
-      margin-top: 20px;
+      display: none;
     }
   </style>
 </head>
 <body>
   <img src="yh1tiyhexq681.gif" alt="Infected Systems">
   <header>Test Domain Please Ignore</header>
-  <br>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum leo vitae bibendum malesuada. Sed volutpat felis eu aliquet consectetur.</p>
 
   <!-- Button to reject cookies and start audio playback -->
   <button onclick="startAudio()">Reject Cookies</button>
@@ -82,8 +73,9 @@
       // Get the audio element by ID
       var audio = document.getElementById("myAudio");
 
-      // Hide the audio player
-      audio.style.display = "none";
+      // Hide the audio container
+      var audioContainer = document.querySelector(".audio-container");
+      audioContainer.style.display = "none";
 
       // Start playing the audio
       audio.play();
